@@ -1,0 +1,418 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="icon" type="image/x-icon" href="./favicon.ico"><noscript></noscript><style>[object HTMLStyleElement]</style><style>[object HTMLStyleElement]</style></head><body style="background-color:#2b2b2b;"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <section>
+    
+    
+  </section>
+
+  <!-- hamburger -->
+  <input type="checkbox" id="navi-toggle" class="checkbox">
+  <label for="navi-toggle" class="button">
+    <span class="icon">&nbsp;</span>
+  </label>
+  <div class="background">&nbsp;</div>
+
+  <!-- nav -->
+  <nav class="nav">
+    <ul class="list">
+      <li class="item"> <a href="./link.html"> Link 1 </a> </li>
+      <li class="item"> <a href="./link.html"> Link 1 </a> </li><li class="item"> <a href="./link.html"> Link 1 </a> </li><li class="item"> <a href="./link.html"> Link 1 </a> </li><li class="item"> <a href="./link.html"> Link 1 </a> </li><li class="item">  </li>
+      
+      
+      
+    </ul>
+  </nav><style>/* page styling */
+body {
+
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section h1 {
+  font-size: 46px;
+  text-align: center;
+}
+
+section p {
+  font-size: 26px;
+  text-align: center;
+}
+
+/* hamburger */
+.checkbox {
+  display: none;
+}
+
+.button {
+  position: relative;
+  background-color: white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5vh; 
+  right: 5vw; 
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem black;
+  text-align: center; 
+  cursor: pointer;
+}
+
+.background {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5.5vh; 
+  right: 5.5vw; 
+  background-image: radial-gradient(#00703a, #00703a);
+  z-index: 1000;
+
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -60vw;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s;
+}
+
+.list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+.item {
+  margin: 1rem;
+  font-size: 36px;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    white 50%
+  );
+  background-size: 220%;
+  transition: all 0.4s;
+}
+
+.link:hover,
+.link:active {
+  color: lightgreen;
+  cursor: pointer;
+}
+
+/* functionality */
+.checkbox:checked ~ .background {
+  transform: scale(80);
+}
+.checkbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+  right: 0;
+}
+
+/*  */
+/* styling hamb icon */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon,
+.icon::before,
+.icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: gray;
+  display: inline-block;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.icon::before {
+  top: -0.8rem;
+}
+.icon::after {
+  top: 0.8rem;
+}
+
+.button:hover icon:before {
+  top: -1rem;
+}
+.button:hover icon::after {
+  top: 1rem;
+}
+
+.checkbox:checked + .button .icon {
+  background-color: transparent;
+}
+
+.checkbox:checked + .button .icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.checkbox:checked + .button .icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+/* page styling */
+body {
+
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section h1 {
+  font-size: 46px;
+  text-align: center;
+}
+
+section p {
+  font-size: 26px;
+  text-align: center;
+}
+
+/* hamburger */
+.checkbox {
+  display: none;
+}
+
+.button {
+  position: relative;
+  background-color: white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5vh; 
+  right: 5vw; 
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem black;
+  text-align: center; 
+  cursor: pointer;
+}
+
+.background {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5.5vh; 
+  right: 5.5vw; 
+  background-image: radial-gradient(#00703a, black);
+  z-index: 1000;
+
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -60vw;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s;
+}
+
+.list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+.item {
+  margin: 1rem;
+  font-size: 36px;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    white 50%
+  );
+  background-size: 220%;
+  transition: all 0.4s;
+}
+
+.link:hover,
+.link:active {
+  color: lightgreen;
+  cursor: pointer;
+}
+
+/* functionality */
+.checkbox:checked ~ .background {
+  transform: scale(80);
+}
+.checkbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+  right: 0;
+}
+
+/*  */
+/* styling hamb icon */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon,
+.icon::before,
+.icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: gray;
+  display: inline-block;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.icon::before {
+  top: -0.8rem;
+}
+.icon::after {
+  top: 0.8rem;
+}
+
+.button:hover icon:before {
+  top: -1rem;
+}
+.button:hover icon::after {
+  top: 1rem;
+}
+
+.checkbox:checked + .button .icon {
+  background-color: transparent;
+}
+
+.checkbox:checked + .button .icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.checkbox:checked + .button .icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+</style>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #00703a;
+  color: white;
+}
+</style>
+
+
+
+<div class="topnav">
+  <a class="active" href="./index.html">Home</a>
+  <a href="./what.html" target="_blank">What is Snyder's Lawn, FAQ, and "how does this stand out?"</a>
+   <a href="./news.html" target="_blank">Snyder's Lawn Daily News</a><a href="./wip.html">WIP</a>
+  <a href="./wip.html">WIP</a>
+<a href="./wip.html">FAQ (WIP)</a></div>
+
+<div style="padding-left:16px">
+  
+  
+</div>
+
+<title>Snyder's Lawn</title>   
+
+
+<div id="forest-ext-shadow-host"></div>
+
+<title>Contact Me - Snyder's Lawn</title>
+  
+
+<center><h2>Snyder's Lawn - Freelance Lawn Mowing</h2><h3>Accepting payment from Cash App, and physical payment (cash, check, etc.)</h3><img src="./index_files/logo-transparent-png.png" alt="" width="220" height="200"><br><br><br><a href="./contact.html" target="_blank">
+<img height="" width="280" src="./index_files/mowbutton.png"></a></center>
+
+
+
+
+
+
+<scribe-shadow id="shadow-root-scribe-elem" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible;"></scribe-shadow></body></html>
